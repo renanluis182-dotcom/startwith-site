@@ -4,6 +4,7 @@ import HomeExperience from "./HomeExperience";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import SolutionCards from "./SolutionCards";
+import ToolsShowcase from "./ToolsShowcase";
 import { siteLinks } from "@/config/site";
 
 const whatsapp =
@@ -11,6 +12,7 @@ const whatsapp =
 const diagnostico = siteLinks.diagnostic;
 const ebookWhatsapp =
   "https://wa.me/5531990176203?text=Ol%C3%A1!%20Quero%20receber%20o%20e-book%20A%20jornada%20de%20vendas%20moldada%20por%20BDR%2C%20SDR%20e%20Closer.";
+const crm = "https://crm-app-flame-kappa.vercel.app/#/login";
 
 const services = [
   {
@@ -137,36 +139,9 @@ export default function Home() {
         </div>
       </section>
 
+      <ToolsShowcase diagnosticHref={diagnostico} crmHref={crm} materialsHref={ebookWhatsapp} />
+
       <HomeExperience whatsapp={whatsapp} diagnostico={diagnostico} />
-
-      <section className="sw-diagnostic" data-reveal>
-        <div className="sw-diagnostic-copy">
-          <span className="sw-diagnostic-code">START / RAIO-X</span>
-          <p className="eyebrow">Diagnóstico gratuito</p>
-          <h2>Descubra onde sua operação comercial está travando.</h2>
-          <p>Em menos de cinco minutos, você recebe uma primeira leitura sobre equipe, processo, funil e conversão.</p>
-        </div>
-        <div className="sw-diagnostic-action">
-          <span className="sw-diagnostic-time">05<small>min</small></span>
-          <ul><li>Visão dos principais gargalos</li><li>Leitura imediata</li><li>Sem compromisso</li></ul>
-          <a className="button button-light" href={diagnostico} target="_blank" rel="noreferrer">Fazer meu Raio-X <FaArrowUpRightFromSquare aria-hidden="true" /></a>
-        </div>
-      </section>
-
-      <section className="sw-ebook" id="ebook">
-        <div className="sw-ebook-art" data-reveal>
-          <span className="sw-ebook-kicker">Guia prático / 2026</span>
-          <div><small>A jornada de vendas moldada por</small><strong>BDR.<br />SDR.<br />CLOSER.</strong></div>
-          <span className="sw-ebook-bottom">14 perguntas para diagnosticar o funil</span>
-        </div>
-        <div className="sw-ebook-copy" data-reveal>
-          <p className="eyebrow">Conteúdo para aplicar</p>
-          <h2>Seu funil pode estar vazando antes mesmo da proposta.</h2>
-          <p>Receba o guia com um autodiagnóstico de 14 perguntas para entender se sua operação depende de pessoas ou de processo.</p>
-          <ul><li>Papéis, handoff e métricas por função</li><li>Remuneração sem distorcer o funil</li><li>Plano de implantação de 90 dias</li></ul>
-          <a className="button button-primary" href={ebookWhatsapp} target="_blank" rel="noreferrer">Receber o e-book <FaArrowUpRightFromSquare aria-hidden="true" /></a>
-        </div>
-      </section>
 
       <section className="sw-about" id="sobre">
         <div className="sw-about-heading" data-reveal>
