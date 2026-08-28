@@ -115,7 +115,7 @@ export default function SiteHeader() {
     <header className="site-header" ref={header}>
       <span className="site-scroll-progress" aria-hidden="true" />
       <Link className="brand" href="/#inicio" aria-label="Start With — início">
-        <span className="brand-mark">S</span>
+        <span className="brand-mark" aria-hidden="true"><video className="brand-mark-video" src="/brand-mark-reveal.mp4" poster="/brand-mark-poster.png" autoPlay muted playsInline preload="auto">S</video></span>
         <span className="brand-wordmark"><span className="brand-start">Start </span><span className="brand-with">With</span></span>
       </Link>
 
