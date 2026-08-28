@@ -3,6 +3,7 @@ import { FaArrowDown, FaArrowUpRightFromSquare, FaDiamond, FaPlus } from "react-
 import HomeExperience from "./HomeExperience";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
+import ToolsShowcase from "./ToolsShowcase";
 import SolutionCards from "./SolutionCards";
 import TransformationCarousel from "./TransformationCarousel";
 import { siteLinks } from "@/config/site";
@@ -134,6 +135,8 @@ export default function Home() {
           <li data-reveal><span className="sw-step-number">03</span><div><small>Implantação</small><h3>Fazer acontecer no campo.</h3><p>Acompanhamos liderança e equipe para ajustar, consolidar e evoluir a operação até ganhar autonomia.</p><ul><li>Treinamento do time</li><li>Gestão acompanhada</li><li>Melhoria contínua</li></ul></div></li>
         </ol>
       </section>
+
+      <ToolsShowcase ebookHref={ebookWhatsapp} />
 
       <TransformationCarousel />
       <HomeExperience whatsapp={whatsapp} diagnostico={diagnostico} />
