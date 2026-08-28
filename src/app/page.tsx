@@ -4,7 +4,6 @@ import HomeExperience from "./HomeExperience";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import SolutionCards from "./SolutionCards";
-import TransformationCarousel from "./TransformationCarousel";
 import { siteLinks } from "@/config/site";
 
 const whatsapp =
@@ -65,27 +64,34 @@ export default function Home() {
       <section className="sw-hero" id="inicio">
         <div className="sw-hero-grid" aria-hidden="true" />
         <div className="sw-hero-copy">
-          <p className="eyebrow"><span>01</span> Consultoria comercial com execução</p>
-          <h1>Pare de vender no improviso.<span> Construa uma operação que sabe repetir resultados.</span></h1>
-          <p className="hero-intro">A Start With diagnostica gargalos, estrutura o processo e entra na rotina do time para transformar esforço comercial em método, gestão e previsibilidade.</p>
+          <p className="eyebrow"><span>01</span> Consultoria liderada por especialista</p>
+          <h1>Pare de vender no improviso.<span> Estruture uma operação que repete resultados.</span></h1>
+          <p className="hero-intro">Diagnóstico, processo e acompanhamento comercial para transformar esforço em previsibilidade.</p>
           <div className="hero-actions">
             <a className="button button-primary" href={diagnostico} target="_blank" rel="noreferrer">Fazer diagnóstico gratuito <FaArrowUpRightFromSquare aria-hidden="true" /></a>
             <a className="sw-text-action" href="#solucoes">Explorar nossa atuação <FaArrowDown aria-hidden="true" /></a>
           </div>
         </div>
 
-        <div className="sw-hero-visual" aria-label="Profissional da Start With em apresentação">
-          <Image src="/renan-retrato-natural.webp" alt="Profissional da Start With apresentando uma estratégia comercial" fill priority sizes="(max-width: 900px) 100vw, 45vw" />
+        <div className="sw-hero-visual" aria-label="Renan Souza, especialista à frente da Start With">
+          <Image src="/renan-retrato-natural.webp" alt="Renan Souza, especialista em vendas e gestão comercial" fill priority sizes="(max-width: 900px) 100vw, 45vw" />
           <div className="sw-photo-wash" aria-hidden="true" />
           <div className="sw-company-bubble">
-            <span>O que fazemos</span>
-            <strong>Diagnóstico. Processo. Gestão.</strong>
-            <p>Da estratégia à execução, dentro da rotina comercial.</p>
+            <span>À frente da consultoria</span>
+            <strong>Renan Souza</strong>
+            <p>18 anos em vendas, liderança e gestão comercial.</p>
           </div>
           <span className="sw-photo-index" aria-hidden="true">SW / 01</span>
         </div>
 
         <div className="sw-hero-note"><span>Atuação</span><p>Projetos B2B e B2C em Minas Gerais e em todo o Brasil.</p></div>
+      </section>
+
+      <section className="sw-proof-strip" aria-label="Experiência do especialista">
+        <p><span>Liderança técnica</span><strong>Renan Souza</strong></p>
+        <p><span>Experiência</span><strong>18 anos</strong></p>
+        <p><span>Vivência</span><strong>6+ segmentos</strong></p>
+        <p><span>Atuação</span><strong>Minas Gerais + Brasil</strong></p>
       </section>
 
       <div className="sw-ticker" aria-label="Frentes de atuação">
@@ -95,47 +101,42 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="sw-manifesto" aria-labelledby="manifesto-title">
-        <div className="sw-section-code" data-reveal><span>02 / Ponto de vista</span><i /></div>
-        <div className="sw-manifesto-copy" data-reveal>
-          <p className="eyebrow">O problema raramente é falta de esforço</p>
-          <h2 id="manifesto-title">Seu comercial não precisa de mais pressão.<br /><span>Precisa de arquitetura.</span></h2>
-        </div>
-        <div className="sw-manifesto-grid">
-          <article data-reveal><span>01</span><h3>Enxergar</h3><p>Gargalos de equipe, funil, rotina, indicadores e conversão sem suavizar o diagnóstico.</p></article>
-          <article data-reveal><span>02</span><h3>Estruturar</h3><p>Papéis, cadências, metas e ferramentas desenhados para a realidade da operação.</p></article>
-          <article data-reveal><span>03</span><h3>Executar</h3><p>Acompanhamento no campo até o novo processo ganhar ritmo, clareza e autonomia.</p></article>
-        </div>
-      </section>
-
       <section className="sw-solutions" id="solucoes">
         <div className="sw-solutions-heading" data-reveal>
-          <div><p className="eyebrow"><span>03</span> Formas de atuação</p><h2>Três frentes.<br />Uma operação mais forte.</h2></div>
-          <p>Entramos no ponto em que sua empresa está agora e construímos o caminho até uma gestão comercial mais previsível.</p>
+          <div><p className="eyebrow"><span>02</span> Formas de atuação</p><h2>O que entregamos<br />em cada etapa.</h2></div>
+          <p>Diagnóstico, estruturação e gestão acompanhada, conforme o estágio da operação.</p>
         </div>
         <SolutionCards services={services} whatsapp={whatsapp} />
       </section>
 
-      <section className="sw-statement" aria-label="Compromisso da Start With" data-reveal>
-        <span>Estratégia sem execução é só intenção.</span>
-        <strong>A Start With entra na operação para fazer a mudança acontecer.</strong>
-      </section>
-
       <section className="sw-process" id="processo">
         <div className="sw-process-intro" data-reveal>
-          <p className="eyebrow"><span>04</span> Método Start With</p>
-          <h2>Clareza para decidir.<br /><span>Estrutura para executar.</span></h2>
-          <p>Um processo simples de entender, rigoroso na prática e construído com quem vive a rotina.</p>
+          <p className="eyebrow"><span>03</span> Método Start With</p>
+          <h2>Diagnosticar.<br /><span>Estruturar. Implantar.</span></h2>
+          <p>Três etapas, com responsáveis e entregáveis definidos.</p>
           <a className="sw-text-action" href={diagnostico} target="_blank" rel="noreferrer">Começar pelo Raio-X <FaArrowUpRightFromSquare aria-hidden="true" /></a>
         </div>
         <ol className="sw-process-steps">
-          <li data-reveal><span className="sw-step-number">01</span><div><small>Diagnóstico</small><h3>Entender antes de prescrever.</h3><p>Mapeamos pessoas, processo, funil, rotina, indicadores e oportunidades para definir prioridades reais.</p><ul><li>Raio-X da operação</li><li>Gargalos priorizados</li><li>Plano de ação</li></ul></div></li>
-          <li data-reveal><span className="sw-step-number">02</span><div><small>Construção</small><h3>Desenhar o que o time consegue usar.</h3><p>Transformamos estratégia em processo, papéis, cadências, critérios e métricas que cabem na rotina.</p><ul><li>Processo comercial</li><li>Playbook e ritos</li><li>Papéis e indicadores</li></ul></div></li>
-          <li data-reveal><span className="sw-step-number">03</span><div><small>Implantação</small><h3>Fazer acontecer no campo.</h3><p>Acompanhamos liderança e equipe para ajustar, consolidar e evoluir a operação até ganhar autonomia.</p><ul><li>Treinamento do time</li><li>Gestão acompanhada</li><li>Melhoria contínua</li></ul></div></li>
+          <li data-reveal><span className="sw-step-number">01</span><div><small>Diagnóstico</small><h3>Priorizar os gargalos.</h3><p>Leitura de pessoas, processo, funil, rotina e indicadores.</p><ul><li>Raio-X da operação</li><li>Gargalos priorizados</li><li>Plano de ação</li></ul></div></li>
+          <li data-reveal><span className="sw-step-number">02</span><div><small>Construção</small><h3>Desenhar o processo.</h3><p>Papéis, cadências, critérios e métricas aplicáveis à rotina.</p><ul><li>Processo comercial</li><li>Playbook e ritos</li><li>Papéis e indicadores</li></ul></div></li>
+          <li data-reveal><span className="sw-step-number">03</span><div><small>Implantação</small><h3>Colocar em operação.</h3><p>Acompanhamento da liderança e do time até o processo ganhar autonomia.</p><ul><li>Treinamento do time</li><li>Gestão acompanhada</li><li>Melhoria contínua</li></ul></div></li>
         </ol>
       </section>
 
-      <TransformationCarousel />
+      <section className="sw-deliverables" aria-labelledby="deliverables-title">
+        <div className="sw-deliverables-heading" data-reveal>
+          <p className="eyebrow"><span>04</span> Entregáveis concretos</p>
+          <h2 id="deliverables-title">O que fica na sua operação.</h2>
+          <p>Materiais de trabalho, não apresentações para arquivar.</p>
+        </div>
+        <div className="sw-deliverables-grid">
+          <article data-reveal><span>01</span><h3>Dashboard comercial</h3><p>Funil, conversão, volume, ritmo e prioridades de acompanhamento.</p></article>
+          <article data-reveal><span>02</span><h3>Playbook de vendas</h3><p>Papéis, critérios, cadências, perguntas e próximos passos.</p></article>
+          <article data-reveal><span>03</span><h3>Rotina de gestão</h3><p>Ritos, pautas, responsáveis, indicadores e decisões.</p></article>
+          <article data-reveal><span>04</span><h3>Plano de ação</h3><p>Prioridades, responsáveis, prazos e critérios de avanço.</p></article>
+        </div>
+      </section>
+
       <HomeExperience whatsapp={whatsapp} diagnostico={diagnostico} />
 
       <section className="sw-diagnostic" data-reveal>
@@ -169,8 +170,8 @@ export default function Home() {
 
       <section className="sw-about" id="sobre">
         <div className="sw-about-heading" data-reveal>
-          <p className="eyebrow"><span>05</span> Quem somos</p>
-          <h2>Experiência de operação.<br /><span>Visão de construção.</span></h2>
+          <p className="eyebrow"><span>05</span> Liderança especialista</p>
+          <h2>Consultoria liderada<br /><span>por Renan Souza.</span></h2>
         </div>
         <div className="sw-about-content">
           <div className="sw-about-visual" data-reveal>
@@ -178,8 +179,7 @@ export default function Home() {
             <div className="sw-about-badge"><strong>18 anos</strong><span>vivendo vendas, liderança e gestão comercial</span></div>
           </div>
           <div className="sw-about-copy" data-reveal>
-            <p>A Start With nasceu para aproximar estratégia e execução. Nossa equipe reúne <strong>profissionais com trajetória em gestão comercial</strong>, treinamento de equipes e construção de funis em diferentes modelos de negócio.</p>
-            <p>A convicção que orienta o trabalho é simples: resultado sustentável não depende de pressão constante. Depende de estrutura, processo e pessoas preparadas para executar.</p>
+            <p>A Start With é conduzida por <strong>Renan Souza</strong>, com 18 anos de atuação em vendas, liderança e gestão comercial. O trabalho combina diagnóstico, construção do processo e acompanhamento da execução.</p>
             <blockquote>“Nosso trabalho só termina quando a estratégia consegue viver na rotina do time.”</blockquote>
           </div>
         </div>
