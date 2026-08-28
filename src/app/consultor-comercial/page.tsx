@@ -22,7 +22,7 @@ const consultantFaqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Consultor Comercial",
+  title: "Consultoria Comercial",
   description: "Consultoria comercial para diagnosticar, estruturar e acompanhar operações de vendas B2B e B2C.",
   alternates: { canonical: "/consultor-comercial" },
   openGraph: {
@@ -39,25 +39,25 @@ export default function ConsultorComercial() {
 
       <section className="consultant-hero">
         <div className="consultant-hero-copy">
-          <Link className="breadcrumb" href="/">Início / Consultor Comercial</Link>
-          <p className="eyebrow">Consultor Comercial</p>
+          <Link className="breadcrumb" href="/">Início / Consultoria Comercial</Link>
+          <p className="eyebrow">Consultoria liderada por especialista</p>
           <h1>Estrutura comercial para empresas que querem <span>escalar vendas.</span></h1>
           <p>Diagnóstico, processo e execução lado a lado para transformar vendas imprevisíveis em uma operação que cresce com controle.</p>
           <div className="hero-actions">
-            <a className="button button-primary" href={whatsapp} target="_blank" rel="noreferrer">Falar com o consultor</a>
+            <a className="button button-primary" href={whatsapp} target="_blank" rel="noreferrer">Falar com a Start With</a>
             <Link className="button button-secondary" href="/#sobre">Conhecer a Start With</Link>
           </div>
-          <ul className="consultant-trust"><li>18 anos de experiência</li><li>B2B e B2C</li><li>Atendimento nacional</li></ul>
+          <ul className="consultant-trust"><li>Liderança especialista</li><li>B2B e B2C</li><li>Atendimento nacional</li></ul>
         </div>
         <div className="consultant-hero-visual">
-          <Image src="/renan-retrato-natural.webp" alt="Renan Souza, consultor comercial e fundador da Start With" fill priority sizes="(max-width: 980px) 90vw, 42vw" />
+          <Image src="/ferramenta-crm.webp" alt="CRM Start With apresentado em monitor e tablet" fill priority sizes="(max-width: 980px) 90vw, 42vw" />
           <div><strong>Execução real</strong><span>Do diagnóstico à rotina do time.</span></div>
         </div>
       </section>
 
       <section className="consultant-services section-shell">
         <div className="section-heading split-heading">
-          <div><p className="eyebrow">Serviços</p><h2>O que faz um consultor comercial na Start With.</h2></div>
+          <div><p className="eyebrow">Serviços</p><h2>O que a liderança especialista coloca em prática.</h2></div>
           <p>Não entregamos um relatório e saímos. Estruturamos a operação, treinamos pessoas e acompanhamos a execução.</p>
         </div>
         <div className="consultant-service-grid">
@@ -85,7 +85,7 @@ export default function ConsultorComercial() {
       <section className="consultant-process section-shell">
         <div className="section-heading">
           <p className="eyebrow">Metodologia</p>
-          <h2>Como o consultor trabalha com sua empresa.</h2>
+          <h2>Como a Start With trabalha com sua empresa.</h2>
         </div>
         <ol className="method-timeline">
           <li><div className="method-index">01</div><div><span>Diagnóstico</span><h3>Clareza sobre o problema.</h3><p>Mapeamos funil, processo, indicadores, time e maturidade comercial.</p></div><ul><li>Gargalos priorizados</li><li>Linha de base</li></ul></li>
@@ -95,8 +95,8 @@ export default function ConsultorComercial() {
       </section>
 
       <section className="consultant-proof">
-        <div className="consultant-proof-copy"><p className="eyebrow">Por que a Start With</p><h2>Consultor que executa, não só diagnostica.</h2><p>A diferença entre uma apresentação bonita e um resultado real está na execução dentro da operação.</p><a className="button button-light" href={whatsapp} target="_blank" rel="noreferrer">Quero conversar</a></div>
-        <div className="consultant-proof-grid"><article><strong>18</strong><span>anos em vendas e gestão</span></article><article><strong>1.000+</strong><span>vendas/mês gerenciadas</span></article><article><strong>50%</strong><span>de crescimento regional</span></article><article><strong>6+</strong><span>segmentos atendidos</span></article></div>
+        <div className="consultant-proof-copy"><p className="eyebrow">Por que a Start With</p><h2>Liderança especialista que executa, não só diagnostica.</h2><p>A diferença entre uma apresentação bonita e um resultado real está na execução dentro da operação.</p><a className="button button-light" href={whatsapp} target="_blank" rel="noreferrer">Quero conversar</a></div>
+        <div className="consultant-proof-grid"><article><strong>B2B+B2C</strong><span>experiência em modelos comerciais</span></article><article><strong>1.000+</strong><span>vendas/mês gerenciadas</span></article><article><strong>50%</strong><span>de crescimento regional</span></article><article><strong>6+</strong><span>segmentos atendidos</span></article></div>
       </section>
 
       <section className="faq consultant-faq section-shell">
@@ -107,7 +107,7 @@ export default function ConsultorComercial() {
       </section>
 
       <section className="contact">
-        <div><p className="eyebrow">Próximo passo</p><h2>Fale com o consultor comercial.</h2></div>
+        <div><p className="eyebrow">Próximo passo</p><h2>Fale com a Start With.</h2></div>
         <div><p>Conte um pouco sobre sua operação e marque uma conversa estratégica com a Start With.</p><a className="button button-lime" href={whatsapp} target="_blank" rel="noreferrer">Conversar pelo WhatsApp</a></div>
       </section>
 

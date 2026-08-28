@@ -75,13 +75,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="sw-hero-visual" aria-label="Renan Souza, especialista à frente da Start With">
-          <Image src="/renan-retrato-natural.webp" alt="Renan Souza, especialista em vendas e gestão comercial" fill priority sizes="(max-width: 900px) 100vw, 45vw" />
+        <div className="sw-hero-visual" aria-label="Ecossistema de ferramentas comerciais da Start With">
+          <Image src="/ferramenta-raio-x.webp" alt="Raio-X Comercial da Start With apresentado em notebook e celular" fill priority sizes="(max-width: 900px) 100vw, 45vw" />
           <div className="sw-photo-wash" aria-hidden="true" />
           <div className="sw-company-bubble">
-            <span>À frente da consultoria</span>
-            <strong>Renan Souza</strong>
-            <p>18 anos em vendas, liderança e gestão comercial.</p>
+            <span>Tecnologia + método</span>
+            <strong>Liderança especialista</strong>
+            <p>Atuação direta em operação, funil e gestão comercial.</p>
           </div>
           <span className="sw-photo-index" aria-hidden="true">SW / 01</span>
         </div>
@@ -89,9 +89,9 @@ export default function Home() {
         <div className="sw-hero-note"><span>Atuação</span><p>Projetos B2B e B2C em Minas Gerais e em todo o Brasil.</p></div>
       </section>
 
-      <section className="sw-proof-strip" aria-label="Experiência do especialista">
-        <p><span>Liderança técnica</span><strong>Renan Souza</strong></p>
-        <p><span>Experiência</span><strong>18 anos</strong></p>
+      <section className="sw-proof-strip" aria-label="Experiência da consultoria Start With">
+        <p><span>Liderança</span><strong>Especialista</strong></p>
+        <p><span>Experiência prática</span><strong>Vendas + gestão</strong></p>
         <p><span>Vivência</span><strong>6+ segmentos</strong></p>
         <p><span>Atuação</span><strong>Minas Gerais + Brasil</strong></p>
       </section>
@@ -145,21 +145,21 @@ export default function Home() {
 
       <section className="sw-about" id="sobre">
         <div className="sw-about-heading" data-reveal>
-          <p className="eyebrow"><span>05</span> Liderança especialista</p>
-          <h2>Consultoria liderada<br /><span>por Renan Souza.</span></h2>
+          <p className="eyebrow"><span>06</span> Liderança especialista</p>
+          <h2>Conhecimento aplicado<br /><span>direto na operação.</span></h2>
         </div>
         <div className="sw-about-content">
           <div className="sw-about-visual" data-reveal>
-            <Image src="/renan-escritorio.webp" alt="Renan Souza, fundador da Start With, em ambiente de trabalho" fill sizes="(max-width: 980px) 100vw, 48vw" />
-            <div className="sw-about-badge"><strong>18 anos</strong><span>vivendo vendas, liderança e gestão comercial</span></div>
+            <Image src="/ferramenta-crm.webp" alt="CRM Start With apresentado em monitor e tablet" fill sizes="(max-width: 980px) 100vw, 48vw" />
+            <div className="sw-about-badge"><strong>Execução</strong><span>liderança especialista do diagnóstico à rotina comercial</span></div>
           </div>
           <div className="sw-about-copy" data-reveal>
-            <p>A Start With é conduzida por <strong>Renan Souza</strong>, com 18 anos de atuação em vendas, liderança e gestão comercial. O trabalho combina diagnóstico, construção do processo e acompanhamento da execução.</p>
-            <blockquote>“Nosso trabalho só termina quando a estratégia consegue viver na rotina do time.”</blockquote>
+            <p>A Start With é uma <strong>consultoria de liderança especialista</strong>, com atuação direta em diagnóstico comercial, desenho de processos, gestão de funil e desenvolvimento de pessoas. O trabalho acompanha a operação da leitura inicial à implantação da nova rotina.</p>
+            <blockquote>“A estratégia precisa funcionar na rotina do time.”</blockquote>
           </div>
         </div>
         <div className="sw-about-results" aria-label="Experiência acumulada pelos profissionais da Start With">
-          <article data-reveal><strong>18</strong><span>anos em vendas e gestão</span></article>
+          <article data-reveal><strong>B2B+B2C</strong><span>experiência em diferentes modelos comerciais</span></article>
           <article data-reveal><strong>1.000+</strong><span>vendas por mês gerenciadas</span></article>
           <article data-reveal><strong>50%</strong><span>de crescimento regional em 12 meses</span></article>
           <article data-reveal><strong>6+</strong><span>segmentos vivenciados</span></article>

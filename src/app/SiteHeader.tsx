@@ -12,11 +12,11 @@ const diagnostico = siteLinks.diagnostic;
 const navigation = [
   { label: "Sobre", href: "/#sobre" },
   { label: "Soluções", href: "/#solucoes" },
-  { label: "E-book", href: "/#ebook" },
+  { label: "Ferramentas", href: "/#ferramentas" },
   { label: "CRM", href: "https://crm-app-flame-kappa.vercel.app/#/login", featured: true, external: true },
   { label: "Processo", href: "/#processo" },
   { label: "Contato", href: "/#contato" },
-  { label: "Consultor Comercial", href: "/consultor-comercial" },
+  { label: "Consultoria Comercial", href: "/consultor-comercial" },
 ];
 
 export default function SiteHeader() {
