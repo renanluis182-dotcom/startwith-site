@@ -487,7 +487,8 @@ summary:focus-visible,
 .footer-institutional p { display: grid; grid-template-columns: 36px 1fr; gap: 12px; align-items: start; margin: 0; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.12); }
 .footer-institutional p > span:last-child { display: grid; gap: 5px; }
 .footer-institutional strong { font-size: 11px; }
-.footer-institutional p > span:last-child > span { color: rgba(255,255,255,.48); font-size: 10px; line-height: 1.5; }
+.footer-institutional p > span:last-child > span,
+.footer-institutional p > span:last-child > a { color: rgba(255,255,255,.48); font-size: 10px; line-height: 1.5; }
 .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.14); }
 .footer-bottom small { color: rgba(255,255,255,.42); font-size: 10px; }
 .footer-bottom a { display: inline-flex; align-items: center; gap: 8px; color: var(--accent-soft); font-size: 10px; font-weight: 800; }
