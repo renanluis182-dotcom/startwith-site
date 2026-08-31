@@ -1,10 +1,11 @@
 import {
   FaArrowUp,
   FaArrowUpRightFromSquare,
-  FaBuilding,
+  FaEnvelope,
   FaInstagram,
   FaLinkedinIn,
   FaLocationDot,
+  FaThreads,
   FaWhatsapp,
 } from "react-icons/fa6";
 import Link from "next/link";
@@ -18,6 +19,7 @@ const diagnostico = siteLinks.diagnostic;
 const channels = [
   { label: "LinkedIn", Icon: FaLinkedinIn, tone: "blue", href: "https://www.linkedin.com/company/start-with-%E2%80%93-consultoria-de-neg%C3%B3cios/" },
   { label: "Instagram", Icon: FaInstagram, tone: "purple", href: "https://instagram.com/startwconsultoria" },
+  { label: "Threads", Icon: FaThreads, tone: "turquoise", href: "https://www.threads.com/@startwconsultoria" },
   { label: "WhatsApp", Icon: FaWhatsapp, tone: "turquoise", href: whatsapp },
 ];
 
@@ -55,7 +57,7 @@ export default function SiteFooter() {
         <div className="footer-institutional">
           <span className="footer-label">Institucional</span>
           <p><span className="institutional-symbol" aria-hidden="true"><FaLocationDot /></span><span><strong>Minas Gerais</strong><span>Atendimento em todo o Brasil</span></span></p>
-          <p><span className="institutional-symbol" aria-hidden="true"><FaBuilding /></span><span><strong>CNPJ</strong><span>64.729.268/0001-41</span></span></p>
+          <p><span className="institutional-symbol" aria-hidden="true"><FaEnvelope /></span><span><strong>E-mail</strong><a href="mailto:info@startwithconsultoria.com">info@startwithconsultoria.com</a></span></p>
         </div>
       </div>
 
