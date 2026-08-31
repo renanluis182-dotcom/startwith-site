@@ -47,7 +47,8 @@ summary:focus-visible,
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 80;
+  isolation: isolate;
   width: min(1440px, 100%);
   min-height: 82px;
   margin: 0 auto;
@@ -64,7 +65,7 @@ summary:focus-visible,
 }
 
 .site-header.is-scrolled { box-shadow: 0 14px 42px rgba(14, 17, 27, .1); }
-.site-scroll-progress { position: absolute; left: 0; bottom: -1px; width: var(--scroll-progress, 0%); height: 2px; background: var(--brand-gradient); transition: width 80ms linear; }
+.site-scroll-progress { position: absolute; left: 0; bottom: -1px; width: 100%; height: 2px; background: var(--brand-gradient); transform: scaleX(var(--scroll-progress, 0)); transform-origin: left center; transition: transform 80ms linear; will-change: transform; }
 
 .brand {
   display: inline-flex;
@@ -122,11 +123,11 @@ summary:focus-visible,
 }
 .header-cta:hover { background: var(--ink); color: var(--white); transform: translateY(-2px); box-shadow: 5px 5px 0 var(--aqua); }
 .header-actions { display: flex; align-items: center; justify-content: flex-end; gap: 12px; }
-.menu-toggle { width: 46px; height: 46px; display: none; place-items: center; gap: 6px; padding: 0; border: 1px solid var(--line); border-radius: 50%; color: var(--ink); background: var(--white); cursor: pointer; }
+.menu-toggle { position: relative; z-index: 2; width: 48px; height: 48px; display: none; place-items: center; gap: 6px; padding: 0; border: 1px solid var(--line); border-radius: 50%; color: var(--ink); background: var(--white); cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
 .menu-toggle svg { width: 18px; height: 18px; }
 .mobile-menu-layer { position: fixed; z-index: 100; inset: 0; display: grid; grid-template-columns: 1fr minmax(290px, 430px); }
 .mobile-menu-backdrop { grid-column: 1; border: 0; background: rgba(14,17,27,.58); backdrop-filter: blur(5px); cursor: pointer; animation: menu-fade 220ms ease both; }
-.mobile-menu-panel { grid-column: 2; grid-row: 1; min-height: 100dvh; padding: 24px clamp(24px, 7vw, 42px) 34px; display: flex; flex-direction: column; color: var(--white); background: var(--graphite); box-shadow: -24px 0 70px rgba(14,17,27,.28); animation: menu-enter 300ms cubic-bezier(.2,.75,.25,1) both; }
+.mobile-menu-panel { grid-column: 2; grid-row: 1; min-height: 100dvh; max-height: 100dvh; overflow-y: auto; overscroll-behavior: contain; padding: 24px clamp(24px, 7vw, 42px) 34px; display: flex; flex-direction: column; color: var(--white); background: var(--graphite); box-shadow: -24px 0 70px rgba(14,17,27,.28); animation: menu-enter 300ms cubic-bezier(.2,.75,.25,1) both; }
 .mobile-menu-topline { display: flex; align-items: center; justify-content: space-between; padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,.14); color: var(--accent-soft); font-size: 11px; font-weight: 850; text-transform: uppercase; letter-spacing: .16em; }
 .mobile-menu-close { width: 42px; height: 42px; display: grid; place-items: center; padding: 0; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; color: var(--white); background: transparent; cursor: pointer; }
 .mobile-menu-close svg { width: 18px; height: 18px; }
@@ -638,7 +639,7 @@ summary:focus-visible,
   min-height: 78px;
   padding-inline: clamp(22px, 4.8vw, 76px);
   color: var(--white);
-  background: rgba(14, 17, 27, .86);
+  background: #0e111b;
   border-color: rgba(255,255,255,.12);
 }
 .home-redesign .brand-start { color: var(--white); }
@@ -773,7 +774,6 @@ summary:focus-visible,
   opacity: .035;
   background-image: repeating-radial-gradient(circle at 30% 20%, rgba(255,255,255,.9) 0 1px, transparent 1px 4px);
   background-size: 7px 7px;
-  transform: translate3d(0, var(--sw-parallax, 0), 0);
   mix-blend-mode: soft-light;
 }
 
@@ -1106,4 +1106,111 @@ summary:focus-visible,
 
 @media (prefers-reduced-motion: reduce) {
   .sw-tool-media, .sw-tool-media img, .sw-tool-copy > a { transition: none; }
+}
+
+
+/* Comfort refinement — softer, Apple-inspired surfaces without losing the editorial identity */
+:root {
+  --radius-compact: 12px;
+  --radius-control: 16px;
+  --radius-card: 24px;
+  --radius-feature: 30px;
+}
+
+.home-redesign .button,
+.home-redesign .header-cta,
+.sw-tool-copy > a,
+.sw-sticky-cta > a {
+  border-radius: var(--radius-control);
+}
+
+.mobile-menu-panel { border-radius: var(--radius-card) 0 0 var(--radius-card); }
+.sw-company-bubble { border-radius: var(--radius-card); }
+
+.sw-manifesto-grid,
+.sw-solution-grid,
+.sw-about-results {
+  gap: 16px;
+  border: 0;
+}
+
+.sw-manifesto-grid article,
+.sw-solution-card,
+.sw-about-results article {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+}
+
+.sw-solution-card { border-color: rgba(255,255,255,.16); }
+.sw-solution-front,
+.sw-solution-reveal { border-radius: inherit; }
+
+.sw-process-steps ul { gap: 10px; }
+.sw-process-steps ul li {
+  padding: 9px 13px;
+  border: 1px solid rgba(47,41,120,.1);
+  border-radius: 999px;
+}
+
+.sw-transformation-card,
+.sw-diagnostic,
+.sw-ebook-art,
+.sw-about-photo,
+.sw-tool-media,
+.sw-tool-dialog {
+  border-radius: var(--radius-feature);
+}
+
+.sw-tool-copy ul {
+  gap: 10px;
+  border-top: 0;
+}
+
+.sw-tool-copy li {
+  min-height: 46px;
+  padding: 13px 16px 13px 30px;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 999px;
+  background: rgba(255,255,255,.035);
+}
+
+.sw-tool-copy li::before {
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sw-faq-list {
+  display: grid;
+  gap: 12px;
+  border-top: 0;
+}
+
+.sw-faq details {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(244,247,252,.62);
+}
+
+.sw-faq summary { padding: 24px 22px; }
+.sw-faq details > p { padding: 0 22px 24px 75px; }
+.sw-sticky-cta { border-radius: 22px; }
+
+@media (max-width: 720px) {
+  .mobile-menu-panel { border-radius: 0; }
+  .sw-manifesto-grid,
+  .sw-solution-grid,
+  .sw-about-results { gap: 12px; }
+
+  .sw-manifesto-grid article,
+  .sw-solution-card,
+  .sw-about-results article,
+  .sw-transformation-card,
+  .sw-diagnostic,
+  .sw-ebook-art,
+  .sw-about-photo,
+  .sw-tool-media { border-radius: 20px; }
+
+  .sw-faq details > p { padding: 0 20px 22px; }
 }
