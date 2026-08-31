@@ -31,7 +31,7 @@ export default function SiteHeader() {
     const updateHeader = () => {
       const scrollable = document.documentElement.scrollHeight - window.innerHeight;
       const progress = scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0;
-      header.current?.style.setProperty("--scroll-progress", `${progress * 100}%`);
+      header.current?.style.setProperty("--scroll-progress", `${progress}`);
       header.current?.classList.toggle("is-scrolled", window.scrollY > 18);
     };
 
@@ -115,7 +115,7 @@ export default function SiteHeader() {
     <header className="site-header" ref={header}>
       <span className="site-scroll-progress" aria-hidden="true" />
       <Link className="brand" href="/#inicio" aria-label="Start With — início">
-        <span className="brand-mark" aria-hidden="true"><video className="brand-mark-video" src="/brand-mark-reveal.mp4" poster="/brand-mark-poster.png" autoPlay muted playsInline preload="auto">S</video></span>
+        <span className="brand-mark" aria-hidden="true"><video className="brand-mark-video" src="/brand-mark-reveal.mp4" poster="/brand-mark-poster.png" autoPlay muted playsInline preload="metadata">S</video></span>
         <span className="brand-wordmark"><span className="brand-start">Start </span><span className="brand-with">With</span></span>
       </Link>
 
@@ -145,7 +145,7 @@ export default function SiteHeader() {
           aria-label="Abrir menu"
           aria-expanded={open}
           aria-controls="mobile-navigation"
-          onClick={() => setOpen(true)}
+          onClick={() => setOpen((current) => !current)}
         >
           <FaBars aria-hidden="true" />
         </button>
