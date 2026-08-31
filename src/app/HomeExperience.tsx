@@ -46,26 +46,23 @@ export default function HomeExperience({ whatsapp, diagnostico }: HomeExperience
 
     if (observer) revealItems.forEach((item) => observer.observe(item));
 
-    let ticking = false;
-    const updateScrollEffects = () => {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(() => {
-        root.style.setProperty("--sw-parallax", `${window.scrollY * 0.035}px`);
-        setStickyVisible(window.scrollY > 760);
-        ticking = false;
-      });
-    };
+    const stickyTrigger = document.getElementById("solucoes");
+    const stickyObserver = stickyTrigger
+      ? new IntersectionObserver(
+          ([entry]) => {
+            setStickyVisible(!entry.isIntersecting && entry.boundingClientRect.top < 0);
+          },
+          { rootMargin: "-78px 0px 0px 0px", threshold: 0 },
+        )
+      : null;
 
-    updateScrollEffects();
-    window.addEventListener("scroll", updateScrollEffects, { passive: true });
+    if (stickyTrigger && stickyObserver) stickyObserver.observe(stickyTrigger);
 
     return () => {
       observer?.disconnect();
+      stickyObserver?.disconnect();
       window.cancelAnimationFrame(initializationFrame);
-      window.removeEventListener("scroll", updateScrollEffects);
       root.classList.remove("motion-ready");
-      root.style.removeProperty("--sw-parallax");
     };
   }, []);
 
