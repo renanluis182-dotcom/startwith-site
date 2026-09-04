@@ -40,7 +40,7 @@ export default function ToolsShowcase({ ebookHref }: ToolsShowcaseProps) {
         "Resultado confidencial",
       ],
       cta: "Fazer meu Raio-X",
-      href: "https://diagnostico.startwithconsultoria.com/",
+      href: "https://diagnostico.startwithconsultoria.com/raiox",
     },
     {
       id: "crm",
