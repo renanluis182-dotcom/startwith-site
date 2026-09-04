@@ -13,7 +13,7 @@ import { siteLinks } from "@/config/site";
 
 const whatsapp =
   "https://wa.me/5531990176203?text=Ol%C3%A1!%20Quero%20conversar%20com%20a%20Start%20With.";
-const crm = "https://crm-app-flame-kappa.vercel.app/#/login";
+const crm = "https://crm.startwithconsultoria.com/#/login";
 const diagnostico = siteLinks.diagnostic;
 
 const channels = [
