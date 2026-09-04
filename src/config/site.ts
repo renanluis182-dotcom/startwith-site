@@ -1,3 +1,3 @@
 export const siteLinks = {
-  diagnostic: "https://raiox-startwith.vercel.app/",
+  diagnostic: "https://diagnostico.startwithconsultoria.com/",
 } as const;
