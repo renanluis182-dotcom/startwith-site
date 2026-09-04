@@ -40,7 +40,7 @@ export default function ToolsShowcase({ ebookHref }: ToolsShowcaseProps) {
         "Resultado confidencial",
       ],
       cta: "Fazer meu Raio-X",
-      href: "https://raiox-startwith.vercel.app/",
+      href: "https://diagnostico.startwithconsultoria.com/",
     },
     {
       id: "crm",
@@ -59,7 +59,7 @@ export default function ToolsShowcase({ ebookHref }: ToolsShowcaseProps) {
         "Visibilidade da operação",
       ],
       cta: "Acessar o CRM",
-      href: "https://crm-app-flame-kappa.vercel.app/#/login",
+      href: "https://crm.startwithconsultoria.com/#/login",
     },
     {
       id: "ebook",
