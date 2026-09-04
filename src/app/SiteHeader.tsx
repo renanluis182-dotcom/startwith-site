@@ -13,7 +13,7 @@ const navigation = [
   { label: "Sobre", href: "/#sobre" },
   { label: "Soluções", href: "/#solucoes" },
   { label: "E-book", href: "/#ebook" },
-  { label: "CRM", href: "https://crm-app-flame-kappa.vercel.app/#/login", featured: true, external: true },
+  { label: "CRM", href: "https://crm.startwithconsultoria.com/#/login", featured: true, external: true },
   { label: "Processo", href: "/#processo" },
   { label: "Contato", href: "/#contato" },
   { label: "Consultor Comercial", href: "/consultor-comercial" },
